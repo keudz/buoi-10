@@ -1,4 +1,4 @@
-package buoi10;
+
 
 public class SinhVien {
     // Thuộc tính
@@ -7,8 +7,6 @@ public class SinhVien {
     private String email;
     private String soDienThoai;
     private String maSinhVien;
-
-
 
 
     public SinhVien(String hoTen, String diaChi, String email, String soDienThoai, String maSinhVien) {
@@ -20,70 +18,72 @@ public class SinhVien {
     }
 
 
-
-
-    public void HoTen(String hoTen) {
+    private void setHoTen(String hoTen) {
         this.hoTen = hoTen;
     }
 
+    private String getHoTen() {
+        return hoTen;
+    }
 
-    public void DiaChi(String diaChi) {
+
+    private void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
     }
 
+    private String getDiaChi() {
+        return diaChi;
+    }
 
-    public void Email(String email) {
+
+    private void setEmail(String email) {
         this.email = email;
     }
 
-    public void SoDienThoai(String soDienThoai) {
+    private String getEmail() {
+        return email;
+    }
+
+    private void setMaSinhVien(String soDienThoai) {
         this.soDienThoai = soDienThoai;
+    }
+    private String getMaSinhVien(){
+        return soDienThoai;
     }
 
 
-    public void MaSinhVien(String maSinhVien) {
+
+    private void setSoDienThoai(String maSinhVien) {
         this.maSinhVien = maSinhVien;
+    }
+    private String getSoDienThoai(){
+        return maSinhVien;
     }
 
 
     public void diHoc() {
-        System.out.println(hoTen + " đang đi học.");
+        System.out.println(getHoTen() + " đang đi học.");
     }
 
     public void lamBaiTap() {
-        System.out.println(hoTen + " đang làm bài tập.");
+        System.out.println(getHoTen() + " đang làm bài tập.");
     }
 
     public void nopHocPhi() {
-        System.out.println(hoTen + " đã nộp học phí.");
+        System.out.println(getHoTen() + " đã nộp học phí.");
     }
 
     public void lamBaiKiemTra() {
-        System.out.println(hoTen + " đang làm bài kiểm tra.");
+        System.out.println(getHoTen() + " đang làm bài kiểm tra.");
     }
 
-    // Phương thức hiển thị thông tin
+
     public void hienThiThongTin() {
-        System.out.println("Họ và tên: " + hoTen);
-        System.out.println("Địa chỉ: " + diaChi);
-        System.out.println("Email: " + email);
-        System.out.println("Số điện thoại: " + soDienThoai);
-        System.out.println("Mã sinh viên: " + maSinhVien);
+        System.out.println("Họ và tên: " + getHoTen());
+        System.out.println("Địa chỉ: " + getDiaChi());
+        System.out.println("Email: " + getEmail());
+        System.out.println("Số điện thoại: " + getSoDienThoai());
+        System.out.println("Mã sinh viên: " + getMaSinhVien());
     }
-    public static void main(String[] args) {
-        SinhVien sv = new SinhVien("nguyen the dat","dh giao thong van tai", "1234@gmail.com","123456789","242230700");
-
-
-
-        sv.diHoc();
-        sv.lamBaiTap();
-        sv.nopHocPhi();
-        sv.lamBaiKiemTra();
-
-
-        sv.hienThiThongTin();
-
-
-     }
 }
 
