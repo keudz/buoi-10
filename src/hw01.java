@@ -9,7 +9,6 @@ public class hw01{
         sv.nopHocPhi();
         sv.lamBaiKiemTra();
 
-
         sv.hienThiThongTin();
 
 
